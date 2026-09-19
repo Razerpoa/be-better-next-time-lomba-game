@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c22qljfp2vsg"]
 
-[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Scene/ui_main_menu.gd" id="1_40tfy"]
+[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_40tfy"]
 
 [node name="MainMenuManeger" type="Control" unique_id=320621915]
 layout_mode = 3
@@ -43,10 +43,10 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = 785.0
-offset_right = 725.0
-offset_bottom = 1142.0
+offset_left = -2.0
+offset_top = 676.0
+offset_right = 743.0
+offset_bottom = 1033.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -69,3 +69,5 @@ text = "Settings"
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Exit Game "
+
+[connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
