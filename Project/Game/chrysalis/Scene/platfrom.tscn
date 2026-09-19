@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b25dsfl2prukt"]
+
+[ext_resource type="Texture2D" uid="uid://beggor31unprd" path="res://Asset/Texture/Grass/grass-field.jpg" id="1_jir7k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4308d"]
+size = Vector3(50, 0.1, 50)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ssgwm"]
+size = Vector2(50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b252e"]
+albedo_texture = ExtResource("1_jir7k")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(10, 10, 10)
+uv2_scale = Vector3(10, 10, 10)
+
+[node name="Platfrom" type="Node3D" unique_id=1170137828]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=346706912]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1237919294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_4308d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=733160018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("PlaneMesh_ssgwm")
+surface_material_override/0 = SubResource("StandardMaterial3D_b252e")
