@@ -20,3 +20,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
 [node name="Npc" parent="Playing" unique_id=1060805146 instance=ExtResource("3_r34rm")]
 transform = Transform3D(-0.982174, 0, 0.18797402, 0, 1, 0, -0.18797402, 0, -0.982174, 0, 0.9745393, 11)
+
+[node name="Label" type="Label" parent="Playing" unique_id=985035699]
+offset_left = 699.0
+offset_top = 496.0
+offset_right = 1314.0
+offset_bottom = 563.0
+theme_override_font_sizes/font_size = 48
+text = "Break Dlu lek sampe jam 1"
