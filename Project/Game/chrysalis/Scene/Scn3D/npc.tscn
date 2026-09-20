@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bpweoafjil06u"]
 
-[ext_resource type="Texture2D" uid="uid://bk3rvqrxgefak" path="res://Asset/model/test/finally-rig_IMG_20260919_094828.jpg" id="1_0j0y8"]
+[ext_resource type="Texture2D" uid="uid://cg7rrpswepgi0" path="res://Asset/Model/test/finally-rig_IMG_20260919_094828.jpg" id="1_0j0y8"]
 [ext_resource type="Script" uid="uid://dj4dfx5l47esw" path="res://Script/npc.gd" id="1_vute2"]
-[ext_resource type="Texture2D" uid="uid://b8h4vvlj581r0" path="res://Asset/model/test/finally-rig_IMG_20260919_094836.jpg" id="2_vute2"]
+[ext_resource type="Texture2D" uid="uid://66rlral5f54k" path="res://Asset/Model/test/finally-rig_IMG_20260919_094836.jpg" id="2_vute2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4308d"]
 
@@ -160,6 +160,7 @@ _data = {
 script = ExtResource("1_vute2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=332259962]
+visible = false
 shape = SubResource("CapsuleShape3D_4308d")
 
 [node name="Model" type="Node3D" parent="." unique_id=1351676849]

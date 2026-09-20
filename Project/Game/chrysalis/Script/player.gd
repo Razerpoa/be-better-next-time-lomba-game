@@ -8,9 +8,11 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $Head/Camera3D
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var toggleCamera
+
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Toggle mouse pake tombol ESC

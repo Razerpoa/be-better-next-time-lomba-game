@@ -3,6 +3,7 @@ extends Control
 @onready var label_peringatan: Label = $Label
 @onready var menu_utama: Control = $Menu_utama
 var mainVisible:bool
+var toggleCamera: bool
 
 func _ready() -> void:
 	# 1. Atur kondisi awal: sembunyikan semua elemen (Alpha / transparansi = 0)
@@ -36,6 +37,7 @@ func _process(delta: float) -> void:
 
 
 func _on_new_game_pressed() -> void:
+	toggleCamera = !toggleCamera
 	mainVisible = true
 	visible = false
 	
