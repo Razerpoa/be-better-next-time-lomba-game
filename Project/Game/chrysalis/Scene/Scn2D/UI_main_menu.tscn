@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c22qljfp2vsg"]
 
 [ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_i8o2m"]
+[ext_resource type="FontFile" uid="uid://qeheiywoi5q2" path="res://Asset/Font/PunkType/Punk Typewriter.otf" id="2_tvqhn"]
 
 [node name="MainMenuManeger" type="Control" unique_id=320621915]
 layout_mode = 3
@@ -52,6 +53,7 @@ grow_vertical = 0
 
 [node name="NewGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=1020384524]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
 theme_override_font_sizes/font_size = 48
 text = "New Game"
 
