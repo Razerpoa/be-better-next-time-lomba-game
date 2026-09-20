@@ -1,28 +1,36 @@
 [gd_scene format=3 uid="uid://b25dsfl2prukt"]
 
-[ext_resource type="Texture2D" uid="uid://beggor31unprd" path="res://Asset/Texture/Grass/grass-field.jpg" id="1_jir7k"]
+[ext_resource type="Script" uid="uid://dcjhhmd5ot8ux" path="res://addons/zylann.hterrain/hterrain.gd" id="1_y8rca"]
+[ext_resource type="Resource" uid="uid://c07uy16pwcpt2" path="res://Asset/terrain/Platfrom/data.hterrain" id="2_3kauk"]
+[ext_resource type="Script" uid="uid://dm2yhgiq5qwxl" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_rdja6"]
+[ext_resource type="Texture2D" uid="uid://dy6ysk7pgtqrw" path="res://Asset/Texture/Grass/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="4_2g615"]
+[ext_resource type="Texture2D" uid="uid://b4x1s88eddyfe" path="res://Asset/Texture/Grass/Poliigon_GrassPatchyGround_4585_Normal.png" id="5_pqq8l"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4308d"]
-size = Vector3(50, 0.1, 50)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ssgwm"]
-size = Vector2(50, 50)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b252e"]
-albedo_texture = ExtResource("1_jir7k")
-albedo_texture_force_srgb = true
-uv1_scale = Vector3(10, 10, 10)
-uv2_scale = Vector3(10, 10, 10)
+[sub_resource type="Resource" id="Resource_yyk0i"]
+script = ExtResource("3_rdja6")
+mode = 0
+textures = [[ExtResource("4_2g615")], [ExtResource("5_pqq8l")]]
 
 [node name="Platfrom" type="Node3D" unique_id=1170137828]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=346706912]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1237919294]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("BoxShape3D_4308d")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=733160018]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("PlaneMesh_ssgwm")
-surface_material_override/0 = SubResource("StandardMaterial3D_b252e")
+[node name="HTerrain" type="Node3D" parent="." unique_id=1069148059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, -64.5)
+script = ExtResource("1_y8rca")
+_terrain_data = ExtResource("2_3kauk")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+physics_material = null
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_yyk0i")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = false
+shader_params/u_tile_reduction = Vector4(0, 0, 0, 0)
+shader_params/u_specular = 0.5
+metadata/_custom_type_script = "uid://dcjhhmd5ot8ux"

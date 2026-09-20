@@ -27,6 +27,14 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Chrysalis"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+
+[global_group]
+
+Npc=""
+
 [input]
 
 maju={
