@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c22qljfp2vsg"]
 
-[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_xwq5n"]
-[ext_resource type="FontFile" uid="uid://qeheiywoi5q2" path="res://Asset/Font/PunkType/Punk Typewriter.otf" id="2_tvqhn"]
+[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_i8o2m"]
 
 [node name="MainMenuManeger" type="Control" unique_id=320621915]
 layout_mode = 3
@@ -10,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xwq5n")
+script = ExtResource("1_i8o2m")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2055705758]
 layout_mode = 1
@@ -47,43 +46,66 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -310.0
-offset_right = 277.0
-offset_bottom = 2.0
+offset_top = -312.0
+offset_right = 764.0
 grow_vertical = 0
 
 [node name="NewGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=1020384524]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.4907405, 0.4907405, 0.4907405, 1)
-theme_override_colors/font_hover_color = Color(17.976582, 17.976582, 17.976582, 1)
-theme_override_fonts/font = ExtResource("2_tvqhn")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "New Game"
-flat = true
 
 [node name="LoadGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=1144733141]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.4907405, 0.4907405, 0.4907405, 1)
-theme_override_fonts/font = ExtResource("2_tvqhn")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "Load Game"
-flat = true
 
 [node name="Settings" type="Button" parent="Menu_utama/VBoxContainer" unique_id=249128324]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.4907405, 0.4907405, 0.4907405, 1)
-theme_override_fonts/font = ExtResource("2_tvqhn")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "Settings"
-flat = true
 
 [node name="ExitGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=194884180]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.4907405, 0.4907405, 0.4907405, 1)
-theme_override_fonts/font = ExtResource("2_tvqhn")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = "Exit Game "
-flat = true
+
+[node name="MenuSettings" type="ColorRect" parent="." unique_id=359687784]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.6)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSettings" unique_id=850841582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menukiri" type="VBoxContainer" parent="MenuSettings/HBoxContainer" unique_id=1181218060]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Kembali" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=1278992424]
+layout_mode = 2
+
+[node name="Video" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=2121275899]
+layout_mode = 2
+
+[node name="Audio" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=1049691277]
+layout_mode = 2
+
+[node name="Kontrol" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=355208253]
+layout_mode = 2
+
+[node name="Kontenkanan" type="MarginContainer" parent="MenuSettings/HBoxContainer" unique_id=1839805339]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
