@@ -2,6 +2,7 @@ extends Control
 
 @onready var label_peringatan: Label = $Label
 @onready var menu_utama: Control = $Menu_utama
+var mainVisible:bool
 
 func _ready() -> void:
 	# 1. Atur kondisi awal: sembunyikan semua elemen (Alpha / transparansi = 0)
@@ -21,11 +22,20 @@ func _ready() -> void:
 	# STEP 3: Fade OUT tulisan peringatan (durasi 1.0 detik)
 	tween.tween_property(label_peringatan, "modulate:a", 0.0, 1.0)
 	
-	# STEP 4: Matikan label peringatan & aktifkan wadah Menu Utama
 	tween.tween_callback(func():
 		label_peringatan.visible = false
 		menu_utama.visible = true
 	)
 	
-	# STEP 5: Fade IN Menu Utama (durasi 0.8 detik)
 	tween.tween_property(menu_utama, "modulate:a", 1.0, 0.8)
+	
+func _process(delta: float) -> void:
+	pass
+	
+	
+
+
+func _on_new_game_pressed() -> void:
+	mainVisible = true
+	visible = false
+	

@@ -1,11 +1,22 @@
 [gd_scene format=3 uid="uid://t4cxpcgndap4"]
 
+[ext_resource type="PackedScene" uid="uid://c22qljfp2vsg" path="res://Scene/UI_main_menu.tscn" id="1_2wwxx"]
+[ext_resource type="Script" uid="uid://d1sku7pr0vxlq" path="res://Script/main.gd" id="1_3amdw"]
 [ext_resource type="PackedScene" uid="uid://c8ylub542ovjn" path="res://Scene/player.tscn" id="1_sblpm"]
 [ext_resource type="PackedScene" uid="uid://8lw31dst2113" path="res://Scene/map.tscn" id="2_r34rm"]
+[ext_resource type="PackedScene" uid="uid://bpweoafjil06u" path="res://Scene/npc.tscn" id="3_r34rm"]
 
 [node name="Main" type="Node3D" unique_id=811091359]
+script = ExtResource("1_3amdw")
 
-[node name="Player" parent="." unique_id=1731815679 instance=ExtResource("1_sblpm")]
+[node name="MainMenuManeger" parent="." unique_id=320621915 instance=ExtResource("1_2wwxx")]
+
+[node name="Playing" type="Node3D" parent="." unique_id=1976583675]
+
+[node name="Player" parent="Playing" unique_id=1731815679 instance=ExtResource("1_sblpm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
-[node name="Map" parent="." unique_id=1982392027 instance=ExtResource("2_r34rm")]
+[node name="Map" parent="Playing" unique_id=1982392027 instance=ExtResource("2_r34rm")]
+
+[node name="Npc" parent="Playing" unique_id=1060805146 instance=ExtResource("3_r34rm")]
+transform = Transform3D(-0.982174, 0, 0.18797402, 0, 1, 0, -0.18797402, 0, -0.982174, 0, 0.9745393, 11)
