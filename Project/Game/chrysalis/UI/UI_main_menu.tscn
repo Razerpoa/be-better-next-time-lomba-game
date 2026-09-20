@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c22qljfp2vsg"]
 
-[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_40tfy"]
+[ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_xwq5n"]
 
 [node name="MainMenuManeger" type="Control" unique_id=320621915]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_40tfy")
+script = ExtResource("1_xwq5n")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2055705758]
 layout_mode = 1
@@ -44,9 +44,9 @@ anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -2.0
-offset_top = 676.0
+offset_top = 755.0
 offset_right = 743.0
-offset_bottom = 1033.0
+offset_bottom = 1040.0
 grow_horizontal = 2
 grow_vertical = 2
 
