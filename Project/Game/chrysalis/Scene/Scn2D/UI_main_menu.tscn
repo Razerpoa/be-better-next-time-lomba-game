@@ -28,7 +28,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
 text = "Peringatan 
 INI game fiksi jangan di lakukan di dunia nyata silahkan ke psikiater kalo membutuhkan nya."
 horizontal_alignment = 1
@@ -54,22 +55,29 @@ grow_vertical = 0
 [node name="NewGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=1020384524]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tvqhn")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 64
 text = "New Game"
+flat = true
 
 [node name="LoadGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=1144733141]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
 text = "Load Game"
+flat = true
 
 [node name="Settings" type="Button" parent="Menu_utama/VBoxContainer" unique_id=249128324]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
 text = "Settings"
+flat = true
 
 [node name="ExitGame" type="Button" parent="Menu_utama/VBoxContainer" unique_id=194884180]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
 text = "Exit Game "
+flat = true
 
 [connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
