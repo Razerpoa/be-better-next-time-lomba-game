@@ -70,42 +70,4 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Exit Game "
 
-[node name="MenuSettings" type="ColorRect" parent="." unique_id=359687784]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.15127608, 0.15127608, 0.15127608, 0.6)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MenuSettings" unique_id=850841582]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Menukiri" type="VBoxContainer" parent="MenuSettings/HBoxContainer" unique_id=1181218060]
-custom_minimum_size = Vector2(450, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Kembali" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=1278992424]
-layout_mode = 2
-
-[node name="Video" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=2121275899]
-layout_mode = 2
-
-[node name="Audio" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=1049691277]
-layout_mode = 2
-
-[node name="Kontrol" type="Button" parent="MenuSettings/HBoxContainer/Menukiri" unique_id=355208253]
-layout_mode = 2
-
-[node name="Kontenkanan" type="MarginContainer" parent="MenuSettings/HBoxContainer" unique_id=1839805339]
-layout_mode = 2
-size_flags_horizontal = 3
-
 [connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]

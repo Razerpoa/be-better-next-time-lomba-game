@@ -31,9 +31,12 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Percakapan" type="RichTextLabel" parent="WadahDialog/PanelUtama" unique_id=1728794764]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99700004
+offset_right = 1.0
+offset_bottom = 0.16397095
 
 [node name="PanelNama" type="Panel" parent="WadahDialog" unique_id=1624413796]
 layout_mode = 1
