@@ -365,6 +365,7 @@ bones/27/rotation = Quaternion(0.041471828, -0.0018199967, 0.7039926, 0.70899314
 bones/27/scale = Vector3(1, 1, 1.0000001)
 
 [node name="Base" type="MeshInstance3D" parent="Model/Skeleton3D" unique_id=2018529439]
+visible = false
 mesh = SubResource("ArrayMesh_gvasf")
 skin = SubResource("Skin_lr0we")
 skeleton = NodePath("..")
