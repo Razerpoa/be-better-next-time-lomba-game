@@ -3,9 +3,10 @@ extends CharacterBody3D
 @export var SPEED: float = 5.0
 @export var JUMP_VELOCITY: float = 4.5
 @export var MOUSE_SENSITIVITY: float = 0.002
-
+@onready var ray = $Head/RayCast3D
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
+@onready var InteractUi = $PlayerUi/Interact
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var toggleCamera
@@ -34,6 +35,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89.0), deg_to_rad(89.0))
 
 func _physics_process(delta: float) -> void:
+	
+	if ray.is_colliding():
+		var collider = ray.get_collider()
+		if collider or collider.is_in_group("Npc"):
+			InteractUi.show()
+			
+	else:
+		InteractUi.hide()
+	
+	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 

@@ -7,6 +7,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="WadahDialog" type="Control" parent="." unique_id=582488842]
 layout_mode = 1
@@ -16,6 +17,7 @@ anchor_bottom = 1.0
 offset_top = -725.7601
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="PanelUtama" type="Panel" parent="WadahDialog" unique_id=1511008262]
 layout_mode = 1
@@ -24,19 +26,23 @@ anchor_top = 0.648
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 60.0
-offset_top = -9.840027
+offset_top = 37.159973
 offset_right = -60.0
-offset_bottom = -2.0
+offset_bottom = -43.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="Percakapan" type="RichTextLabel" parent="WadahDialog/PanelUtama" unique_id=1728794764]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.99700004
-offset_right = 1.0
-offset_bottom = 0.16397095
+offset_left = 50.0
+offset_top = 23.0
+offset_right = -39.0
+offset_bottom = -21.83603
+theme_override_font_sizes/normal_font_size = 36
+text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus"
 
 [node name="PanelNama" type="Panel" parent="WadahDialog" unique_id=1624413796]
 layout_mode = 1
@@ -46,9 +52,9 @@ anchor_top = 0.554
 anchor_right = 0.21900001
 anchor_bottom = 0.591
 offset_left = 1.4799957
-offset_top = -0.32000732
+offset_top = 70.67999
 offset_right = 0.519989
-offset_bottom = 19.71997
+offset_bottom = 90.71997
 
 [node name="NamaKarakter" type="Label" parent="WadahDialog/PanelNama" unique_id=2115754413]
 layout_mode = 1
@@ -59,3 +65,5 @@ anchor_right = 1.003
 anchor_bottom = 0.95000005
 offset_left = -0.16000009
 offset_right = -0.08001709
+theme_override_font_sizes/font_size = 36
+text = "Ambatucum AHHHH"

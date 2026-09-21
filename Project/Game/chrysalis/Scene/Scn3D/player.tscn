@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8ylub542ovjn"]
 
 [ext_resource type="Script" uid="uid://cbfag7fwmkbru" path="res://Script/player.gd" id="1_kelma"]
+[ext_resource type="PackedScene" uid="uid://dem4lrwdh2rx8" path="res://Scene/Scn2D/player_ui.tscn" id="2_aaqsf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4308d"]
 
@@ -23,3 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=627026746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.5)
 target_position = Vector3(0, 0, -1)
+
+[node name="PlayerUi" parent="." unique_id=456049737 instance=ExtResource("2_aaqsf")]
+mouse_filter = 2

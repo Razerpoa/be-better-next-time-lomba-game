@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://8lw31dst2113"]
 
-[ext_resource type="PackedScene" uid="uid://b25dsfl2prukt" path="res://Scene/platfrom.tscn" id="1_7ap1n"]
+[ext_resource type="PackedScene" uid="uid://b25dsfl2prukt" path="res://Scene/Scn3D/platfrom.tscn" id="1_7ap1n"]
 
 [sub_resource type="Environment" id="Environment_4308d"]
 fog_enabled = true
+fog_light_color = Color(0.11198628, 0.12227818, 0.13828784, 1)
 
 [node name="Map" type="Node3D" unique_id=1982392027]
 
