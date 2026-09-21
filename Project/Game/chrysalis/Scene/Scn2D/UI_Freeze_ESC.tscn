@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5882353)
+color = Color(0, 0, 0, 0.61960787)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1302112552]
 layout_mode = 1
@@ -34,6 +34,8 @@ grow_vertical = 2
 
 [node name="Video" type="Button" parent="VBoxContainer" unique_id=853344213]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_fonts/font = ExtResource("1_ufs36")
 theme_override_font_sizes/font_size = 64
 text = "Video"
@@ -41,6 +43,8 @@ flat = true
 
 [node name="Audio" type="Button" parent="VBoxContainer" unique_id=1828135986]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_fonts/font = ExtResource("1_ufs36")
 theme_override_font_sizes/font_size = 64
 text = "Audio"
@@ -48,6 +52,8 @@ flat = true
 
 [node name="Kontrol" type="Button" parent="VBoxContainer" unique_id=1660257344]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_fonts/font = ExtResource("1_ufs36")
 theme_override_font_sizes/font_size = 64
 text = "Kontrol"
@@ -55,6 +61,8 @@ flat = true
 
 [node name="SaveGame" type="Button" parent="VBoxContainer" unique_id=790034299]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_fonts/font = ExtResource("1_ufs36")
 theme_override_font_sizes/font_size = 64
 text = "Save Game"
@@ -62,6 +70,8 @@ flat = true
 
 [node name="ExitGame" type="Button" parent="VBoxContainer" unique_id=1457142931]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_fonts/font = ExtResource("1_ufs36")
 theme_override_font_sizes/font_size = 64
 text = "Exit game"
@@ -81,3 +91,178 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_cv57w")
 text = "Kembali"
 flat = true
+
+[node name="Panelkanan" type="Panel" parent="." unique_id=2041545015]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31300002
+anchor_right = 0.95800006
+anchor_bottom = 1.0
+offset_left = 0.039978027
+offset_right = 0.6398926
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="IsiVideo" type="GridContainer" parent="Panelkanan" unique_id=1276763057]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023000002
+anchor_top = 0.046000004
+anchor_right = 0.66
+anchor_bottom = 0.45000002
+offset_left = 0.50299835
+offset_top = -22.680004
+offset_right = 0.25994873
+offset_bottom = -3.0517578e-05
+grow_vertical = 2
+theme_override_constants/h_separation = 218
+theme_override_constants/v_separation = 120
+columns = 2
+
+[node name="ResolusiVideo" type="Label" parent="Panelkanan/IsiVideo" unique_id=722395807]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
+text = "Resolusi Video"
+
+[node name="OptionResolusi" type="OptionButton" parent="Panelkanan/IsiVideo" unique_id=696511149]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 64
+
+[node name="Kecerahan" type="Label" parent="Panelkanan/IsiVideo" unique_id=738749945]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
+text = "Kecerahaan"
+
+[node name="HSlider" type="HSlider" parent="Panelkanan/IsiVideo" unique_id=1625020389]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="Bahasa" type="Label" parent="Panelkanan/IsiVideo" unique_id=1482440171]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
+text = "Bahasa"
+
+[node name="OptionBahasa" type="OptionButton" parent="Panelkanan/IsiVideo" unique_id=523963177]
+layout_mode = 2
+
+[node name="IsiAudio" type="GridContainer" parent="Panelkanan" unique_id=1901348558]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="VolumeUtama" type="Label" parent="Panelkanan/IsiAudio" unique_id=643089331]
+layout_mode = 2
+text = "Volume Utama"
+
+[node name="HSlider" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=854654109]
+layout_mode = 2
+
+[node name="SuaraMusik" type="Label" parent="Panelkanan/IsiAudio" unique_id=907319348]
+layout_mode = 2
+text = "Suara Musik"
+
+[node name="HSlider2" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=1895685689]
+layout_mode = 2
+
+[node name="SuaraEfek" type="Label" parent="Panelkanan/IsiAudio" unique_id=629968575]
+layout_mode = 2
+text = "Suara Efek"
+
+[node name="HSlider3" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=1680031943]
+layout_mode = 2
+
+[node name="IsiKontrol" type="GridContainer" parent="Panelkanan" unique_id=165577497]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Sensitivitas" type="Label" parent="Panelkanan/IsiKontrol" unique_id=974527459]
+layout_mode = 2
+text = "Sensitivitas
+"
+
+[node name="HSlider" type="HSlider" parent="Panelkanan/IsiKontrol" unique_id=2004951185]
+layout_mode = 2
+
+[node name="Maju" type="Label" parent="Panelkanan/IsiKontrol" unique_id=216959119]
+layout_mode = 2
+text = "Maju"
+
+[node name="W" type="Button" parent="Panelkanan/IsiKontrol" unique_id=560926938]
+layout_mode = 2
+text = "W"
+
+[node name="Mundur" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1635283506]
+layout_mode = 2
+text = "Mundur"
+
+[node name="S" type="Button" parent="Panelkanan/IsiKontrol" unique_id=792373710]
+layout_mode = 2
+text = "S"
+
+[node name="Kiri" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1580880221]
+layout_mode = 2
+text = "Kiri"
+
+[node name="A" type="Button" parent="Panelkanan/IsiKontrol" unique_id=1596019668]
+layout_mode = 2
+text = "A"
+
+[node name="Kanan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1896289800]
+layout_mode = 2
+text = "Kanan"
+
+[node name="D" type="Button" parent="Panelkanan/IsiKontrol" unique_id=1537204757]
+layout_mode = 2
+text = "D"
+
+[node name="GunakanBarang" type="Label" parent="Panelkanan/IsiKontrol" unique_id=142370064]
+layout_mode = 2
+text = "Menggunakan Barang"
+
+[node name="E" type="Button" parent="Panelkanan/IsiKontrol" unique_id=605804229]
+layout_mode = 2
+text = "E"
+
+[node name="DropBarang" type="Label" parent="Panelkanan/IsiKontrol" unique_id=654609955]
+layout_mode = 2
+text = "Drop Barang"
+
+[node name="G" type="Button" parent="Panelkanan/IsiKontrol" unique_id=633201633]
+layout_mode = 2
+text = "G"
+
+[node name="Serangan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1423887737]
+layout_mode = 2
+text = "Serangan"
+
+[node name="Mouse_1" type="Button" parent="Panelkanan/IsiKontrol" unique_id=443987506]
+layout_mode = 2
+text = "Mouse 1"
+
+[node name="Menghindar" type="Label" parent="Panelkanan/IsiKontrol" unique_id=333455578]
+layout_mode = 2
+text = "Menghindar"
+
+[node name="Q" type="Button" parent="Panelkanan/IsiKontrol" unique_id=620642619]
+layout_mode = 2
+text = "Q"
