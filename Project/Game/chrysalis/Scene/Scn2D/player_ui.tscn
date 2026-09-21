@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://dem4lrwdh2rx8"]
 
-[ext_resource type="PackedScene" uid="uid://d4e36pp602vcp" path="res://Scene/Scn2D/dialogue_ui.tscn" id="1_37jvy"]
-
 [node name="PlayerUi" type="Control" unique_id=456049737]
 layout_mode = 3
 anchors_preset = 15
@@ -11,7 +9,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Interact" type="Label" parent="." unique_id=1983905389]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,6 +24,62 @@ grow_vertical = 2
 text = "E: Interact
 "
 
-[node name="DialogueUI" parent="." unique_id=1595448192 instance=ExtResource("1_37jvy")]
+[node name="WadahDialog" type="Control" parent="." unique_id=1364594141]
 visible = false
 layout_mode = 1
+anchor_top = 0.67200005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -725.7601
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelUtama" type="Panel" parent="WadahDialog" unique_id=1865802858]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.648
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 37.159973
+offset_right = -60.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Percakapan" type="RichTextLabel" parent="WadahDialog/PanelUtama" unique_id=515885657]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99700004
+offset_left = 50.0
+offset_top = 23.0
+offset_right = -39.0
+offset_bottom = -21.83603
+theme_override_font_sizes/normal_font_size = 36
+text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus"
+
+[node name="PanelNama" type="Panel" parent="WadahDialog" unique_id=1780940684]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_top = 0.554
+anchor_right = 0.21900001
+anchor_bottom = 0.591
+offset_left = 1.4799957
+offset_top = 70.67999
+offset_right = 0.519989
+offset_bottom = 90.71997
+
+[node name="NamaKarakter" type="Label" parent="WadahDialog/PanelNama" unique_id=1692592093]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = -0.05
+anchor_right = 1.003
+anchor_bottom = 0.95000005
+offset_left = -0.16000009
+offset_right = -0.08001709
+theme_override_font_sizes/font_size = 36
+text = "Ambatucum AHHHH"

@@ -7,10 +7,10 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var InteractUi = $PlayerUi/Interact
+@onready var DialogUi = $PlayerUi/WadahDialog
 
+var cantMove: bool = true
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-var toggleCamera
-
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -34,27 +34,38 @@ func _unhandled_input(event: InputEvent) -> void:
 		head.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89.0), deg_to_rad(89.0))
 
+func DialogNpc():
+	DialogUi.show()
+	var Name = $PlayerUi/WadahDialog/PanelNama/NamaKarakter
+	var Dialog = $PlayerUi/WadahDialog/PanelUtama/Percakapan
+	Name.text = "ucok Ngocok"
+	Dialog.text = "Yo Bro, Ini lagi dalam pengembangan Tinggal Kan Jejak"
+
 func _physics_process(delta: float) -> void:
+	#Test Area
+	
+	if Input.is_action_just_pressed("InteractUi") and not cantMove:
+		cantMove = true
+		DialogUi.hide()
 	
 	if ray.is_colliding():
 		var collider = ray.get_collider()
-		if collider or collider.is_in_group("Npc"):
+		if collider and collider.name == "Npc" and cantMove:
+			print(cantMove)
 			InteractUi.show()
-			
+			if Input.is_action_just_pressed("InteractUi"):
+				DialogNpc()
+				cantMove = false
 	else:
 		InteractUi.hide()
-	
-	
+		
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
-	if Input.is_action_just_pressed("loncat") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
 	var input_dir := Input.get_vector("kiri", "kanan", "maju", "mundur")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	if direction:
+	if direction and cantMove:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
