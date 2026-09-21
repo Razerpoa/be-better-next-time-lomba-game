@@ -5,6 +5,10 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv57w"]
 bg_color = Color(0.05882353, 0.05882353, 0.05882353, 0.7490196)
 
+[sub_resource type="Theme" id="Theme_cv57w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufs36"]
+
 [node name="UiFreezeEsc" type="Control" unique_id=1787731476]
 layout_mode = 3
 anchors_preset = 15
@@ -93,30 +97,32 @@ text = "Kembali"
 flat = true
 
 [node name="Panelkanan" type="Panel" parent="." unique_id=2041545015]
+modulate = Color(0.60122335, 0.6012229, 0.6012228, 1)
+self_modulate = Color(0.57700837, 0.5770084, 0.57700837, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.31300002
-anchor_right = 0.95800006
+anchor_left = 0.273
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.039978027
-offset_right = 0.6398926
-grow_horizontal = 0
+offset_left = -3.1600342
+grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_cv57w")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ufs36")
 
 [node name="IsiVideo" type="GridContainer" parent="Panelkanan" unique_id=1276763057]
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.023000002
-anchor_top = 0.046000004
-anchor_right = 0.66
+anchor_top = 0.029000001
+anchor_right = 0.69600004
 anchor_bottom = 0.45000002
-offset_left = 0.50299835
-offset_top = -22.680004
-offset_right = 0.25994873
-offset_bottom = -3.0517578e-05
+offset_left = 1.5258789e-05
+offset_top = -0.3200016
+offset_right = 0.8529663
+offset_bottom = 3.9999695
 grow_vertical = 2
-theme_override_constants/h_separation = 218
+theme_override_constants/h_separation = 220
 theme_override_constants/v_separation = 120
 columns = 2
 
@@ -139,7 +145,7 @@ theme_override_font_sizes/font_size = 64
 text = "Kecerahaan"
 
 [node name="HSlider" type="HSlider" parent="Panelkanan/IsiVideo" unique_id=1625020389]
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
@@ -154,115 +160,209 @@ text = "Bahasa"
 layout_mode = 2
 
 [node name="IsiAudio" type="GridContainer" parent="Panelkanan" unique_id=1901348558]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -509.0
+offset_right = 980.0
+offset_bottom = -5.0
 grow_vertical = 2
+theme_override_constants/h_separation = 220
+theme_override_constants/v_separation = 120
 columns = 2
 
 [node name="VolumeUtama" type="Label" parent="Panelkanan/IsiAudio" unique_id=643089331]
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
 text = "Volume Utama"
 
 [node name="HSlider" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=854654109]
+custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 
 [node name="SuaraMusik" type="Label" parent="Panelkanan/IsiAudio" unique_id=907319348]
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
 text = "Suara Musik"
 
 [node name="HSlider2" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=1895685689]
+custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 
 [node name="SuaraEfek" type="Label" parent="Panelkanan/IsiAudio" unique_id=629968575]
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
 text = "Suara Efek"
 
 [node name="HSlider3" type="HSlider" parent="Panelkanan/IsiAudio" unique_id=1680031943]
+custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 
 [node name="IsiKontrol" type="GridContainer" parent="Panelkanan" unique_id=165577497]
-visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_top = 0.007
+anchor_right = 0.864
 anchor_bottom = 1.0
-offset_top = 8.0
+offset_top = 0.43999958
+offset_right = 0.26391602
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 20
+columns = 4
 
 [node name="Sensitivitas" type="Label" parent="Panelkanan/IsiKontrol" unique_id=974527459]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
 text = "Sensitivitas
 "
 
 [node name="HSlider" type="HSlider" parent="Panelkanan/IsiKontrol" unique_id=2004951185]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Panelkanan/IsiKontrol" unique_id=1435171278]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panelkanan/IsiKontrol" unique_id=2096972417]
 layout_mode = 2
 
 [node name="Maju" type="Label" parent="Panelkanan/IsiKontrol" unique_id=216959119]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 64
 text = "Maju"
 
 [node name="W" type="Button" parent="Panelkanan/IsiKontrol" unique_id=560926938]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "W"
 
 [node name="Mundur" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1635283506]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Mundur"
 
 [node name="S" type="Button" parent="Panelkanan/IsiKontrol" unique_id=792373710]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "S"
 
 [node name="Kiri" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1580880221]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Kiri"
 
 [node name="A" type="Button" parent="Panelkanan/IsiKontrol" unique_id=1596019668]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "A"
 
 [node name="Kanan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1896289800]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Kanan"
 
 [node name="D" type="Button" parent="Panelkanan/IsiKontrol" unique_id=1537204757]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "D"
 
-[node name="GunakanBarang" type="Label" parent="Panelkanan/IsiKontrol" unique_id=142370064]
+[node name="Interaksi" type="Label" parent="Panelkanan/IsiKontrol" unique_id=142370064]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
-text = "Menggunakan Barang"
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
+text = "Interaksi
+"
 
 [node name="E" type="Button" parent="Panelkanan/IsiKontrol" unique_id=605804229]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "E"
 
 [node name="DropBarang" type="Label" parent="Panelkanan/IsiKontrol" unique_id=654609955]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Drop Barang"
 
 [node name="G" type="Button" parent="Panelkanan/IsiKontrol" unique_id=633201633]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "G"
 
 [node name="Serangan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1423887737]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Serangan"
 
 [node name="Mouse_1" type="Button" parent="Panelkanan/IsiKontrol" unique_id=443987506]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "Mouse 1"
 
 [node name="Menghindar" type="Label" parent="Panelkanan/IsiKontrol" unique_id=333455578]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ufs36")
+theme_override_font_sizes/font_size = 48
 text = "Menghindar"
 
 [node name="Q" type="Button" parent="Panelkanan/IsiKontrol" unique_id=620642619]
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "Q"
