@@ -443,3 +443,9 @@ size_flags_vertical = 0
 text = "Q"
 
 [connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Menu_utama/VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Menu_utama/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu_Settings/ColorRect/VBoxContainer/Video" to="Menu_Settings" method="_on_video_pressed"]
+[connection signal="pressed" from="Menu_Settings/ColorRect/VBoxContainer/Audio" to="Menu_Settings" method="_on_audio_pressed"]
+[connection signal="pressed" from="Menu_Settings/ColorRect/VBoxContainer/Kontrol" to="Menu_Settings" method="_on_kontrol_pressed"]
+[connection signal="pressed" from="Menu_Settings/ColorRect/Kembali" to="Menu_Settings" method="_on_kembali_pressed"]

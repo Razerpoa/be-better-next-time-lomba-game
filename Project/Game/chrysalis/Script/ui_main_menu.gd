@@ -2,6 +2,8 @@ extends Control
 
 @onready var label_peringatan: Label = $Label
 @onready var menu_utama: Control = $Menu_utama
+@onready var menu_settings: Control = $Menu_Settings # Tambahan referensi Settings
+
 var mainVisible: bool
 var toggleCamera: bool
 var tween: Tween
@@ -10,8 +12,12 @@ func _ready() -> void:
 	# 1. Atur kondisi awal
 	label_peringatan.modulate.a = 0.0
 	label_peringatan.visible = true
+	
 	menu_utama.visible = false
 	menu_utama.modulate.a = 0.0
+	
+	# Pastikan setting mati saat efek teks peringatan berjalan
+	menu_settings.visible = false 
 
 	# 2. Buat animasi berurutan menggunakan Tween
 	tween = create_tween()
@@ -45,3 +51,12 @@ func _on_new_game_pressed() -> void:
 	toggleCamera = !toggleCamera
 	mainVisible = true
 	visible = false
+
+# --- FUNGSI UNTUK MENGGANTI LAYAR KE SETTINGS ---
+func _on_settings_pressed() -> void:
+	menu_utama.visible = false
+	menu_settings.visible = true
+
+
+func _on_load_game_pressed() -> void:
+	pass # Replace with function body.
