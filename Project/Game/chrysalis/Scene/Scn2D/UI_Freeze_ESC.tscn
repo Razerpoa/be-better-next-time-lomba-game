@@ -213,6 +213,7 @@ custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 
 [node name="IsiKontrol" type="GridContainer" parent="Panelkanan" unique_id=165577497]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.028
