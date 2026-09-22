@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://8lw31dst2113" path="res://Scene/Scn3D/map.tscn" id="2_r34rm"]
 [ext_resource type="PackedScene" uid="uid://d2qpb0f2u1jpg" path="res://Scene/Scn3D/npc.scn" id="5_13nkd"]
 [ext_resource type="PackedScene" uid="uid://c22qljfp2vsg" path="res://Scene/Scn2D/UI_main_menu.tscn" id="5_pnib3"]
-[ext_resource type="PackedScene" uid="uid://c410eiq03kshn" path="res://Asset/Model/ALL-ANIMATION/ALL-ANIMATED-THING.fbx" id="6_pnib3"]
 
 [node name="Main" type="Node3D" unique_id=811091359]
 script = ExtResource("1_3amdw")
@@ -21,6 +20,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
 [node name="Npc" parent="Playing" unique_id=1060805146 instance=ExtResource("5_13nkd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.092194, -12.777094)
-
-[node name="ALL-ANIMATED-THING" parent="." unique_id=503233543 instance=ExtResource("6_pnib3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.894835, -0.49808377, 0.102403164)
