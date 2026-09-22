@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dxpiofy1482uq" path="res://Script/ui_main_menu.gd" id="1_i8o2m"]
 [ext_resource type="FontFile" uid="uid://qeheiywoi5q2" path="res://Asset/Font/PunkType/Punk Typewriter.otf" id="2_tvqhn"]
+[ext_resource type="Script" uid="uid://djod8ddpdu645" path="res://Script/menu_settings.gd" id="3_us4oq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us4oq"]
+bg_color = Color(0.05882353, 0.05882353, 0.05882353, 0.7490196)
+
+[sub_resource type="Theme" id="Theme_cxs3g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtae4"]
 
 [node name="MainMenuManeger" type="Control" unique_id=320621915]
 layout_mode = 3
@@ -87,5 +95,351 @@ theme_override_fonts/font = ExtResource("2_tvqhn")
 theme_override_font_sizes/font_size = 64
 text = "Exit Game "
 flat = true
+
+[node name="Menu_Settings" type="Control" parent="." unique_id=1897680347]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_us4oq")
+
+[node name="ColorRect" type="ColorRect" parent="Menu_Settings" unique_id=280910458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.101960786, 0.7764706)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Settings/ColorRect" unique_id=1725434575]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -163.0
+offset_right = 521.0
+offset_bottom = 73.0
+grow_vertical = 2
+
+[node name="Video" type="Button" parent="Menu_Settings/ColorRect/VBoxContainer" unique_id=1717612409]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Video"
+flat = true
+
+[node name="Audio" type="Button" parent="Menu_Settings/ColorRect/VBoxContainer" unique_id=1943590394]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Audio"
+flat = true
+
+[node name="Kontrol" type="Button" parent="Menu_Settings/ColorRect/VBoxContainer" unique_id=1121320241]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31799886, 0.31799886, 0.31799886, 1)
+theme_override_colors/font_hover_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Kontrol"
+flat = true
+
+[node name="Kembali" type="Button" parent="Menu_Settings/ColorRect" unique_id=1720129976]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.056
+anchor_right = 0.223
+anchor_bottom = 0.126
+offset_top = 4.5199966
+offset_right = 0.83999634
+offset_bottom = 4.919998
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_us4oq")
+text = "Kembali"
+flat = true
+
+[node name="Panelkanan" type="Panel" parent="Menu_Settings/ColorRect" unique_id=402511742]
+modulate = Color(0.60122335, 0.6012229, 0.6012228, 1)
+self_modulate = Color(0.57700837, 0.5770084, 0.57700837, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.273
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.1600342
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_cxs3g")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtae4")
+
+[node name="IsiVideo" type="GridContainer" parent="Menu_Settings/ColorRect/Panelkanan" unique_id=1470118558]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.029000001
+anchor_right = 0.69600004
+anchor_bottom = 0.45000002
+offset_left = -0.3739853
+offset_top = -0.3200016
+offset_right = 0.8529663
+offset_bottom = 3.9999695
+grow_vertical = 2
+theme_override_constants/h_separation = 220
+theme_override_constants/v_separation = 120
+columns = 2
+
+[node name="ResolusiVideo" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=557380595]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Resolusi Video"
+
+[node name="OptionResolusi" type="OptionButton" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=1709516054]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 64
+
+[node name="Kecerahan" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=1079914500]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Kecerahaan"
+
+[node name="HSlider" type="HSlider" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=359940363]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="Bahasa" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=1101387153]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Bahasa"
+
+[node name="OptionBahasa" type="OptionButton" parent="Menu_Settings/ColorRect/Panelkanan/IsiVideo" unique_id=1863550464]
+layout_mode = 2
+
+[node name="IsiAudio" type="GridContainer" parent="Menu_Settings/ColorRect/Panelkanan" unique_id=1387754116]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.029000001
+anchor_right = 0.70100003
+anchor_bottom = 0.49500003
+offset_left = -0.37400055
+offset_top = -0.3200016
+offset_right = -0.69903564
+offset_bottom = 0.39996338
+grow_vertical = 2
+theme_override_constants/h_separation = 220
+theme_override_constants/v_separation = 120
+columns = 2
+
+[node name="VolumeUtama" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=1018437244]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Volume Utama"
+
+[node name="HSlider" type="HSlider" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=550560229]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+
+[node name="SuaraMusik" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=934228352]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Suara Musik"
+
+[node name="HSlider2" type="HSlider" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=336985183]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+
+[node name="SuaraEfek" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=1820327002]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Suara Efek"
+
+[node name="HSlider3" type="HSlider" parent="Menu_Settings/ColorRect/Panelkanan/IsiAudio" unique_id=799756529]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+
+[node name="IsiKontrol" type="GridContainer" parent="Menu_Settings/ColorRect/Panelkanan" unique_id=269789633]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.007
+anchor_right = 0.864
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 0.43999958
+offset_right = 0.26391602
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 20
+columns = 4
+
+[node name="Sensitivitas" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1840422147]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Sensitivitas
+"
+
+[node name="HSlider" type="HSlider" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=94801892]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1563661352]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=675270506]
+layout_mode = 2
+
+[node name="Maju" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=854033637]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 64
+text = "Maju"
+
+[node name="W" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1803559615]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "W"
+
+[node name="Mundur" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=2007122487]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Mundur"
+
+[node name="S" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=147501305]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "S"
+
+[node name="Kiri" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=2097488322]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Kiri"
+
+[node name="A" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1052866602]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "A"
+
+[node name="Kanan" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1518051102]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Kanan"
+
+[node name="D" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=259688513]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "D"
+
+[node name="Interaksi" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1824832163]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Interaksi
+"
+
+[node name="E" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1769211620]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "E"
+
+[node name="DropBarang" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=922107365]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Drop Barang"
+
+[node name="G" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=755481119]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "G"
+
+[node name="Serangan" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=812989764]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Serangan"
+
+[node name="Mouse_1" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1854389793]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Mouse 1"
+
+[node name="Menghindar" type="Label" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=1469090771]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_tvqhn")
+theme_override_font_sizes/font_size = 48
+text = "Menghindar"
+
+[node name="Q" type="Button" parent="Menu_Settings/ColorRect/Panelkanan/IsiKontrol" unique_id=192351671]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Q"
 
 [connection signal="pressed" from="Menu_utama/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]

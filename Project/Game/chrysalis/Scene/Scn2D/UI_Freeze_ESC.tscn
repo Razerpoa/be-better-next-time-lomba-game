@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dd3ql8lqlha5m"]
 
+[ext_resource type="Script" uid="uid://0shnbovtnouh" path="res://Script/ui_freeze_esc.gd" id="1_cv57w"]
 [ext_resource type="FontFile" uid="uid://qeheiywoi5q2" path="res://Asset/Font/PunkType/Punk Typewriter.otf" id="1_ufs36"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv57w"]
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cv57w")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=521921549]
 layout_mode = 1
@@ -114,13 +116,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ufs36")
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.029000001
-anchor_right = 0.69600004
+anchor_left = 0.022000002
+anchor_top = 0.044000003
+anchor_right = 0.71900004
 anchor_bottom = 0.45000002
-offset_left = 1.5258789e-05
-offset_top = -0.3200016
-offset_right = 0.8529663
-offset_bottom = 3.9999695
+offset_left = 0.22201347
+offset_top = -0.5200043
+offset_right = -0.32403564
+offset_bottom = 19.99997
 grow_vertical = 2
 theme_override_constants/h_separation = 220
 theme_override_constants/v_separation = 120
@@ -162,11 +165,14 @@ layout_mode = 2
 [node name="IsiAudio" type="GridContainer" parent="Panelkanan" unique_id=1901348558]
 visible = false
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_top = 0.029000001
+anchor_right = 0.72300005
 anchor_bottom = 0.5
-offset_top = -509.0
-offset_right = 980.0
+offset_left = 0.22199821
+offset_top = -0.3200016
+offset_right = -0.47705078
 offset_bottom = -5.0
 grow_vertical = 2
 theme_override_constants/h_separation = 220
@@ -209,12 +215,14 @@ layout_mode = 2
 [node name="IsiKontrol" type="GridContainer" parent="Panelkanan" unique_id=165577497]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.007
-anchor_right = 0.864
-anchor_bottom = 1.0
-offset_top = 0.43999958
-offset_right = 0.26391602
-offset_bottom = 8.0
+anchor_left = 0.028
+anchor_top = 0.022000002
+anchor_right = 0.892
+anchor_bottom = 0.99500006
+offset_left = -0.17200089
+offset_top = 0.23999786
+offset_right = 0.091918945
+offset_bottom = 0.39990234
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 60
@@ -253,6 +261,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "W"
+flat = true
 
 [node name="Mundur" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1635283506]
 custom_minimum_size = Vector2(120, 40)
@@ -269,6 +278,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "S"
+flat = true
 
 [node name="Kiri" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1580880221]
 custom_minimum_size = Vector2(120, 40)
@@ -285,6 +295,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "A"
+flat = true
 
 [node name="Kanan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1896289800]
 custom_minimum_size = Vector2(120, 40)
@@ -301,6 +312,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "D"
+flat = true
 
 [node name="Interaksi" type="Label" parent="Panelkanan/IsiKontrol" unique_id=142370064]
 custom_minimum_size = Vector2(120, 40)
@@ -318,6 +330,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "E"
+flat = true
 
 [node name="DropBarang" type="Label" parent="Panelkanan/IsiKontrol" unique_id=654609955]
 custom_minimum_size = Vector2(120, 40)
@@ -334,6 +347,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "G"
+flat = true
 
 [node name="Serangan" type="Label" parent="Panelkanan/IsiKontrol" unique_id=1423887737]
 custom_minimum_size = Vector2(120, 40)
@@ -350,6 +364,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "Mouse 1"
+flat = true
 
 [node name="Menghindar" type="Label" parent="Panelkanan/IsiKontrol" unique_id=333455578]
 custom_minimum_size = Vector2(120, 40)
@@ -366,3 +381,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "Q"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="VBoxContainer/Kontrol" to="." method="_on_kontrol_pressed"]
+[connection signal="pressed" from="Kembali" to="." method="_on_kembali_pressed"]
