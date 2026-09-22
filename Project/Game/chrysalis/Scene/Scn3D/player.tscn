@@ -7,8 +7,11 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ssgwm"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1731815679]
+[node name="Player" type="CharacterBody3D" unique_id=1731815679 groups=["Player"]]
 script = ExtResource("1_kelma")
+SPEED = null
+JUMP_VELOCITY = null
+MOUSE_SENSITIVITY = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=261073096]
 shape = SubResource("CapsuleShape3D_4308d")

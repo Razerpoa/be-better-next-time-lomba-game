@@ -39,7 +39,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_tvqhn")
 theme_override_font_sizes/font_size = 48
 text = "Peringatan 
-INI game fiksi jangan di lakukan di dunia nyata silahkan ke psikiater kalo membutuhkan nya."
+Ini Hanyalah Cerita Fiksi Karangan Developer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
